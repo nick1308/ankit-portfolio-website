@@ -9,15 +9,26 @@ import Footer from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <div className="animated-bg animated-bg-dark">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
+        <div className="grid-pattern"></div>
+      </div>
+
+      <div className="content-wrapper">
+        <main className="min-h-screen bg-background">
+          <Header />
+          <Hero />
+          <About />
+          <Skills />
+          <Services />
+          <Projects />
+          <Contact />
+          <Footer />
+        </main>
+      </div>
+    </>
   )
 }
