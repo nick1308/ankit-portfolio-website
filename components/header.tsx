@@ -34,29 +34,33 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-serif font-bold text-primary hover-underline">
+          <a href="#" className="text-2xl font-serif font-bold text-primary hover-underline focus-gold">
             Ankit V
           </a>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm font-medium transition-smooth hover:text-primary">
+            <a href="#about" className="focus-gold text-sm font-medium transition-smooth hover:text-primary">
               About
             </a>
-            <a href="#services" className="text-sm font-medium transition-smooth hover:text-primary">
+            <a href="#services" className="focus-gold text-sm font-medium transition-smooth hover:text-primary">
               Services
             </a>
-            <a href="#projects" className="text-sm font-medium transition-smooth hover:text-primary">
+            <a href="#projects" className="focus-gold text-sm font-medium transition-smooth hover:text-primary">
               Projects
             </a>
-            <a href="#contact" className="text-sm font-medium transition-smooth hover:text-primary">
+            <a href="#contact" className="focus-gold text-sm font-medium transition-smooth hover:text-primary">
               Contact
             </a>
           </nav>
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg border border-border hover:bg-secondary transition-smooth focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label="Toggle theme"
+            className="focus-gold p-2 rounded-lg border border-border hover:bg-secondary transition-smooth"
+            aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
           >
-            {isDark ? <Sun className="w-5 h-5 text-primary" /> : <Moon className="w-5 h-5 text-primary" />}
+            {isDark ? (
+              <Sun className="w-5 h-5 text-primary" aria-hidden="true" />
+            ) : (
+              <Moon className="w-5 h-5 text-primary" aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>

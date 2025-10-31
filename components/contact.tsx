@@ -21,7 +21,7 @@ export default function Contact() {
               Send Email
             </a>
             <a
-              href="https://linkedin.com/in/ankit-v"
+              href="https://linkedin.com/in/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 border border-primary text-primary rounded-lg font-semibold transition-smooth hover:bg-primary hover:text-primary-foreground"
@@ -30,7 +30,7 @@ export default function Contact() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/ankit-v"
+              href="https://github.com/nick1308"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 border border-border text-foreground rounded-lg font-semibold transition-smooth hover:border-primary hover:text-primary"

@@ -4,31 +4,29 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-import { Geist, Geist_Mono, Playfair_Display, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Inter, Space_Grotesk, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
-const _playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-})
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-serif" })
 
 export const metadata: Metadata = {
-  title: "Ankit V - Cybersecurity Expert",
+  title: "Ankit V - Cybersecurity Student & Security Engineer",
   description:
-    "Full-stack cybersecurity expert specializing in penetration testing, secure development, and ethical hacking",
-  keywords: "cybersecurity, ethical hacking, penetration testing, web security, UI/UX",
+    "Cybersecurity student and aspiring security engineer specializing in penetration testing, secure development, and ethical hacking.",
+  keywords: "cybersecurity, ethical hacking, penetration testing, web security, student",
   authors: [{ name: "Ankit V" }],
   openGraph: {
-    title: "Ankit V - Cybersecurity Expert",
+    title: "Ankit V - Cybersecurity Student & Security Engineer",
     description:
-      "Full-stack cybersecurity expert specializing in penetration testing, secure development, and ethical hacking",
+      "Cybersecurity student and aspiring security engineer specializing in penetration testing, secure development, and ethical hacking.",
     type: "website",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -37,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{

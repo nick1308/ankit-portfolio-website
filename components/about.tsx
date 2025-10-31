@@ -27,7 +27,7 @@ export default function About() {
             {[
               { label: "100+", desc: "Penetration Tests" },
               { label: "50+", desc: "Secure Applications" },
-              { label: "15+", desc: "Years Experience" },
+              { label: "1+", desc: "Years Experience" },
               { label: "1000+", desc: "Vulnerabilities Found" },
             ].map((stat) => (
               <div
